@@ -24,11 +24,9 @@ class Test_GameOfLife {
     return gw;
   }
 
-
   @Test
   void SingleCellShouldDie(){
     Cell[][] customConf = createSimpleWorldConf();
-    customConf[1][1].setCurrentState(State.ALIVE);
 
     GameOfLife gol = new GameOfLife(customConf);
 
@@ -56,7 +54,6 @@ class Test_GameOfLife {
     assertFalse(currentConf[0][2].isAlive());
     assertFalse(currentConf[1][2].isAlive());
     assertFalse(currentConf[2][2].isAlive());
-
   }
 
   @Test

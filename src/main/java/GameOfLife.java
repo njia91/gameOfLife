@@ -1,5 +1,5 @@
 enum Configuration {
-  GLIDER, PULSAR, NONE
+  GLIDER, PULSAR
 }
 
 public class GameOfLife {
