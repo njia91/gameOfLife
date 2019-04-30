@@ -12,7 +12,7 @@ public class GameOfLife {
 
   /**
    * Init a grid with pre-installed cell configuration.
-   * @param initialConf
+   * @param initialConf defines the initial configuration
    */
   public GameOfLife(Configuration initialConf) {
         switch (initialConf){
@@ -113,7 +113,6 @@ public class GameOfLife {
     grid[13][9].setCurrentState(State.ALIVE);
     grid[13][10].setCurrentState(State.ALIVE);
     grid[13][11].setCurrentState(State.ALIVE);
-
   }
 
   /**
@@ -127,7 +126,7 @@ public class GameOfLife {
   /**
    * Iterates over all cells in grid and evolve them to next generation.
    */
-  public void iterate(){
+  public void evolveToNextGeneration(){
     int numOfAliveNeighbours;
     Cell currentCell;
     for (int row = 0; row < numOfRows; row++) {
@@ -155,7 +154,6 @@ public class GameOfLife {
       }
     }
   }
-
 
   private void evolveAllCells(){
     for (int row = 0; row < numOfRows; row++) {

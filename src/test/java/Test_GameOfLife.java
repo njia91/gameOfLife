@@ -30,7 +30,7 @@ class Test_GameOfLife {
 
     GameOfLife gol = new GameOfLife(customConf);
 
-    gol.iterate();
+    gol.evolveToNextGeneration();
     Cell[][] currentConf = gol.getCurrentGrid();
 
     assertFalse(currentConf[1][1].isAlive());
@@ -45,7 +45,7 @@ class Test_GameOfLife {
 
     GameOfLife gol = new GameOfLife(customConf);
 
-    gol.iterate();
+    gol.evolveToNextGeneration();
     Cell[][] currentConf = gol.getCurrentGrid();
 
     assertTrue(currentConf[2][0].isAlive());
@@ -67,7 +67,7 @@ class Test_GameOfLife {
 
     GameOfLife gol = new GameOfLife(customConf);
 
-    gol.iterate();
+    gol.evolveToNextGeneration();
     Cell[][] currentConf = gol.getCurrentGrid();
 
     assertFalse(currentConf[1][1].isAlive());
@@ -82,7 +82,7 @@ class Test_GameOfLife {
 
     GameOfLife gol = new GameOfLife(customConf);
 
-    gol.iterate();
+    gol.evolveToNextGeneration();
     Cell[][] currentConf = gol.getCurrentGrid();
 
     assertTrue(currentConf[1][1].isAlive());
@@ -90,7 +90,7 @@ class Test_GameOfLife {
     assertTrue(currentConf[1][0].isAlive());
 
 
-    gol.iterate();
+    gol.evolveToNextGeneration();
     currentConf = gol.getCurrentGrid();
 
     assertTrue(currentConf[0][1].isAlive());
